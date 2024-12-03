@@ -16,7 +16,7 @@ df['FID'] = df['Patient EID']
 
 # Convert E11 values to binary: 1 for breast cancer, 0 otherwise
 
-df['Breast_cancer'] = df['E11'].apply(lambda x: 1 if x == 1 else 0)
+df['Breast_cancer'] = df['C50'].apply(lambda x: 1 if x == 1 else 0)
 
 # Remove rows with any missing values
 df.dropna(inplace=True)
